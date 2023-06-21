@@ -8,17 +8,17 @@
 */
 
 int main(void)
-{		
+{	
 	char li[] = "_putchar";
 	int len, i;
 
 	len = strlen(li);
-	
-        for (i = 0; i < len; i++)
+
+	for (i = 0; i < len; i++)
 	{
 		_putchar(li[i]);
 	}
 	_putchar('\n');
 	return (0);
-} 
+}
 
