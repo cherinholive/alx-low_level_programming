@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -8,9 +10,9 @@
 int main(void)
 {
 	
-        char li[] = ['_', 'p', 'u', 't', 'c', 'h', 'a','r']
+        char li[] = "_putchar";
         int len, i;
-        int len = sizeof(li) / sizeof(char)
+        int len = strlen(li)
 
         for (i = 0; i < len; i++)
         {
