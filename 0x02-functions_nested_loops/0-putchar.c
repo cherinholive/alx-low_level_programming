@@ -1,15 +1,21 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
- *_putchar - print a char
- *@c: char to be print
- *
- *Return: success 1
- *error: -1
+ * * main - print
+ * Return 0
  */
 
-int _putchar(char ch)
+int main(void)
 {
-  return (write(1, &ch, 1));
+        char li[] = ['_', 'p', 'u', 't', 'c', 'h', 'a','r', ]
+        int len, i;
+        int len = sizeof(li) / sizeof(char)
+
+        for (i = 0; i < len; i++)
+        {
+                _putchar(li[i]);
+        }
+        _putchar("\n");
+        return (0);
+
 }
