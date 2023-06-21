@@ -3,7 +3,7 @@
 /**
  * _islower - if c is a lowercase
  *@c: input to fun and value to check
- *Retur: 1 if lower or 0 if not
+ *Return: 1 if lower or 0 if not
  *
  */
 
