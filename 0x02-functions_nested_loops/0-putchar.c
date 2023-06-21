@@ -18,7 +18,7 @@ int main(void)
         {
                 _putchar(li[i]);
         }
-        _putchar("\n");
+        _putchar('\n');
         return (0);
 
 }
