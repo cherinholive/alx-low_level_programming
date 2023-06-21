@@ -2,9 +2,8 @@
 
 /**
  *
- * main - list a-z
+ * print_alphabet - list a-z
  *
- * Return: 0
  */
 
 void print_alphabet(void)
@@ -14,7 +13,7 @@ void print_alphabet(void)
 	for (l = 'a'; l <= 'z'; l++)
 	{
 		_putchar(l);
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
 
