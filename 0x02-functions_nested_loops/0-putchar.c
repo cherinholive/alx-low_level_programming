@@ -8,7 +8,7 @@
 int main(void)
 {
 	
-        char li[] = ['_', 'p', 'u', 't', 'c', 'h', 'a','r', ]
+        char li[] = ['_', 'p', 'u', 't', 'c', 'h', 'a','r']
         int len, i;
         int len = sizeof(li) / sizeof(char)
 
