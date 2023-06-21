@@ -12,7 +12,7 @@ int main(void)
 	
         char li[] = "_putchar";
         int len, i;
-        int len = strlen(li)
+        int len = strlen(li);
 
         for (i = 0; i < len; i++)
         {
