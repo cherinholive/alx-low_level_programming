@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
         if (result == NULL)
                 return (NULL);
 
-	unsigned int i, j;
+	int i, j;
 
         for (i = 0; i < height; i++)
 		for (k = 0; k < width; k++)
