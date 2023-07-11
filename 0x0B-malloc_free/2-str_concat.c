@@ -6,7 +6,7 @@
  * @s1: string input 1.
  * @s2: string input 2.
  *
- * return: null on failed, concateneted string.
+ * Return: null on failed, or concateneted string.
  */
 
 char *str_concat(char *s1, char *s2)
@@ -39,10 +39,9 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	for (k = 0; k <= l1; k++)
-        {
-                result[i] = s1[k];
-        }
+ 	{
+		result[i] = s2[k];
+	}
 
 	return (result);
 }
-

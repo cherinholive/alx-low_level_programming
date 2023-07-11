@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * *_strdup - returns a pointer to a newly allocated space in memory, 
+ * *_strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter.
  * @*str: input pointer
  * Return: Null if str = null and insuff. memory or pointto new memory.
@@ -14,20 +14,20 @@ char *_strdup(char *str)
 	char *result;
 
 	if (str == NULL)
-                return (NULL);
+		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
-			;
+		;
 
-	result = (char *)malloc((i + 1) * sizeof(str));
-		
+	result = (char *)malloc((i + 1) * sizeof(char));
+	
 	if (result == NULL)
 	{
 		free(result);
 		return (NULL);
 	}
 
-	for (k = 0; k <= i; k++)
+	for (k = 0; k < i; k++)
 	{
 		result[k] = str[k];
 	}
