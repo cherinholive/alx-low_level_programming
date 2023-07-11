@@ -4,7 +4,8 @@
 /**
  * *_strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter.
- * @*str: input pointer
+ *
+ * @str: input pointer
  * Return: Null if str = null and insuff. memory or pointto new memory.
  */
 
@@ -20,7 +21,7 @@ char *_strdup(char *str)
 		;
 
 	result = (char *)malloc((i + 1) * sizeof(char));
-	
+
 	if (result == NULL)
 	{
 		free(result);
