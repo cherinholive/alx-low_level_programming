@@ -10,11 +10,11 @@
 
 char *_strdup(char *str)
 {
-	if (str == NULL)
-		return (NULL);
-
 	unsigned int i, k;
 	char *result;
+
+	if (str == NULL)
+                return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
 			;
@@ -22,7 +22,10 @@ char *_strdup(char *str)
 	result = (char *)malloc((i + 1) * sizeof(str));
 		
 	if (result == NULL)
+	{
+		free(result);
 		return (NULL);
+	}
 
 	for (k = 0; k <= i; k++)
 	{
