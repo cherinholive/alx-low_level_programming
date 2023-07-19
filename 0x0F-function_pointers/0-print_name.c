@@ -2,8 +2,8 @@
 
 /**
  * print_name - print name by input func.
- * @*name: name to print.
- * @(*f)(char *): function to print the name.
+ * @name: name to print.
+ * @f: function to print the name.
  * Return: none.
  */
 
