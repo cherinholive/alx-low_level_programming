@@ -3,9 +3,9 @@
 /**
  * int_index -  searches for an integer.
  * element of an array
- * @*array: input arrary
+ * @array: input arrary
  * @size: array len
- * @(*action)(int): input func.
+ * @action: input func.
  *
  * Return: none
  */
@@ -22,5 +22,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 			if (cmp(array[i]))
 				return (i);
 		}
-}
+	}
 
+	return (-1);
+}
