@@ -19,10 +19,14 @@ int sum_them_all(const unsigned int n, ...)
 		return (sum);
 
 	va_start(arg, n);
+
 	for (i = n; i < n; i++)
 	{
 		x = (int) va_arg(arg, int);
 		sum  += x;
 	}
+
+	va_end(arg);
+
 	return (sum);
 }

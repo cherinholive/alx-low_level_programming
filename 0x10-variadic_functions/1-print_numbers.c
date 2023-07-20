@@ -22,11 +22,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		;
 	else
 	{
+		va_start(arg, n);
+
 		for (i = 0; i < n; i++)
 		{
 			x = va_arg(arg, int);
 			printf("%d%c", x, separator);
 		}
+
+		va_end(arg);
 	}
 	
 }
