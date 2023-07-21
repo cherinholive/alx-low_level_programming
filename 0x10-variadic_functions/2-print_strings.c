@@ -3,16 +3,15 @@
 #include <stdio.h>
 
 /**
- * print_numbers - prints numbers, followed by a
- *  new line with separator provided.
+ * print_strings - that prints strings, followed by a new line
  *  @separator: input char (divider)
  *  @n: len arg pass
  *  @...: futher more arg.
  *
- *  Return: Null or pint the list
+ *  Return none.
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list arg;
 	unsigned int i;
@@ -24,14 +23,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	else
 	{
 		va_start(arg, n);
-
 		for (i = 0; i < n; i++)
 		{
-			x = va_arg(arg, int);
-			printf("%d%s", x, separator);
+			x = va_arg(arg, char);
+			if (x == NULL)
+				printf("(nil)");
+			else
+				printf("%d%s", x, separator);
 		}
+		printf("\n");
 
 		va_end(arg);
 	}
-	
 }
