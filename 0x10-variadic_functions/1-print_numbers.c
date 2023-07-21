@@ -16,24 +16,17 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int x;
 
-	if (separator == NULL)
-	{
-	}
-	else
-	{
-		va_start(arg, n);
+	va_start(arg, n);
 
-		for (i = 0; i < n; i++)
-		{
-			x = va_arg(arg, int);
-			printf("%d", x);
+	for (i = 0; i < n; i++)
+	{
+		x = va_arg(arg, int);
+		printf("%d", x);
 
-			if (i < n - 1 && separator)
-				printf("%s", separator);
-		}
-		
-		printf("\n");
-		va_end(arg);
+		if (i < n - 1 && separator)
+			printf("%s", separator);
 	}
-	
+
+	printf("\n");
+	va_end(arg);
 }
