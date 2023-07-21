@@ -1,6 +1,4 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 /**
  * print_numbers - prints numbers, followed by a
@@ -28,9 +26,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		for (i = 0; i < n; i++)
 		{
 			x = va_arg(arg, int);
-			printf("%d%s", x, separator);
-		}
+			printf("%d", x,);
 
+			if (i < n - 1)
+				if (separator)
+					printf("%s", separator);
+		}
+		
+		printf("\n");
 		va_end(arg);
 	}
 	
