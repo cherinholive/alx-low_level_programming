@@ -11,9 +11,6 @@
 int cal_power(int base, int power)
 {
 	int result = 1;
-
-	if (!base  || !power)
-		return (0);
 	
 	while (power != 0)
 	{
