@@ -12,8 +12,8 @@ int cal_power(int base, int power)
 {
 	int result = 1;
 
-	if (base == NULL || power == NULL)
-		return (NULL);
+	if (!base  || !power)
+		return (0);
 	
 	while (power != 0)
 	{
@@ -34,8 +34,10 @@ int cal_power(int base, int power)
 
 unsigned int binary_to_uint(const char *b)
 {
-	int base = 2, i = 0, j = 0 len;
+	int base, i, j, len;
 	unsigned int result;
+
+	base = 2;
 
 	if (b == NULL)
 		return (0);
@@ -43,7 +45,7 @@ unsigned int binary_to_uint(const char *b)
 	for (len = 0; b[len] != "\0"; len++)
 		;
 
-	for (j; b[j] != "\0"; j++)
+	for (j = 0; b[j] != "\0"; j++)
 	{
 		i = 0;
 		power = len - 1;
