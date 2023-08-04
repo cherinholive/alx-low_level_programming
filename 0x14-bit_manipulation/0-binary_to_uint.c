@@ -31,9 +31,8 @@ int cal_power(int base, int power)
 
 unsigned int binary_to_uint(const char *b)
 {
-	int base = 2, i = 0, j = 0;
-	int per_r, len;
-	char *result;
+	int base = 2, i = 0, j = 0 len;
+	unsigned int result;
 
 	if (b == NULL)
 		return (0);
@@ -47,10 +46,9 @@ unsigned int binary_to_uint(const char *b)
 		power = len - 1;
 		i = cal_power(base, power);
 		i = i * (int)b[j];
-		per_r += i;
+		result += i;
 		len--;
 	}
 
-	result = (char *)per_r;
 	return (result);
 }
