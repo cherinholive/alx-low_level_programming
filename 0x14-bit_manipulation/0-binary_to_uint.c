@@ -10,13 +10,16 @@
 
 int cal_power(int base, int power)
 {
-	int result;
+	int result = 1;
 
 	if (base == NULL || power == NULL)
 		return (NULL);
 	
 	while (power != 0)
-		result *= base, power--;
+	{
+		result *= base;
+       		power--;
+	}
 
 	return result;
 }
