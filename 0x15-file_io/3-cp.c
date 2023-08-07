@@ -46,7 +46,7 @@ void error_handl( int error_code, char *argv[], int fd)
 
 int main (int argc, char *argv[])
 {
-	int file_from, file_to;
+	int file_from, file_to, err_c;
 	ssize_t num_char_r, num_char_w;
 	char buf[1024];
 
