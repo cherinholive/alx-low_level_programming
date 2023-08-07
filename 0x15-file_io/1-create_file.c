@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int open_rt;
 	int n_letters;
-	int rwr;
+	int w_result;
 
 	if (!filename)
 		return (-1);
@@ -28,12 +28,12 @@ int create_file(const char *filename, char *text_content)
 	for (n_letters = 0; text_content[n_letters]; n_letters++)
 		;
 
-	rwr = write(fd, text_content, n_letters);
+	w_result = write(open_rt, text_content, n_letters);
 
-	if (rwr == -1)
+	if (w_result == -1)
 		return (-1);
 
-	close(fd);
+	close(open_rt);
 
 	return (1);
 }
