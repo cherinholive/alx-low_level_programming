@@ -8,7 +8,7 @@
  * Return: none
  */
 
-void error_handl( int error_code, char *argv[], int fd)
+void error_handle( int error_code, char *argv[], int fd)
 {
 
 	switch (error_code)
