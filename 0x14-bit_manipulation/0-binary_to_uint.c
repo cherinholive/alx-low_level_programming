@@ -1,27 +1,6 @@
 #include "main.h"
 
 /**
- * cal_power - reture result of exponential
- * @base: int base
- * @power: int power / exp
- *
- * Return: result or NULL
- */
-
-int cal_power(int base, int power)
-{
-	int result = 1;
-
-	while (power != 0)
-	{
-		result *= base;
-		power--;
-	}
-
-	return (result);
-}
-
-/**
  * binary_to_uint - converts a binary number
  * to an unsigned int.
  * @b: char input to be convert
@@ -30,10 +9,9 @@ int cal_power(int base, int power)
 
 unsigned int binary_to_uint(const char *b)
 {
-	int base, power;
-	unsigned int len, j, i, result = 0;
+	int base, len;
+	unsigned int result = 0;
 
-	base = 2;
 
 	if (b == NULL)
 		return (0);
@@ -41,15 +19,13 @@ unsigned int binary_to_uint(const char *b)
 	for (len = 0; b[len] != '\0'; len++)
 		;
 
-	for (j = 0; b[j] != '\0'; j++)
+	for (len--, base = 1; len >= 0; len--, base *= 2)
 	{
-		if (b[j] != '0' && b[j] != '1')
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		power = len - 1;
-		i = cal_power(base, power);
-		i = i * (int)b[j];
-		result += i;
-		len--;
+
+		if (b[len] & 1)
+			result += base;
 	}
 
 	return (result);
