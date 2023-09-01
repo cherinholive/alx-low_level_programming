@@ -43,7 +43,8 @@ unsigned int binary_to_uint(const char *b)
 
 	for (j = 0; b[j] != '\0'; j++)
 	{
-		i = 0;
+		if (b[j] != '0' && b[j] != '1')
+			return (0);
 		power = len - 1;
 		i = cal_power(base, power);
 		i = i * (int)b[j];
