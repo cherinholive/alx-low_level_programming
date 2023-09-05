@@ -3,13 +3,14 @@
 
 /**
  * error_handle - handle error and return error msg.
- * @file_code: copying file
- * @eror co: copy to file
+ * @error_code: copying file
+ * @argv: argument
+ * @fd: code
  *
  * Return: none
  */
 
-void error_handle( int error_code, char *argv[], int fd)
+void error_handle(int error_code, char *argv[], int fd)
 {
 
 	switch (error_code)
@@ -45,7 +46,7 @@ void error_handle( int error_code, char *argv[], int fd)
  * Return: 0
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_c;
 	ssize_t num_char_r, num_char_w;
