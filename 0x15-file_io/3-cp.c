@@ -56,9 +56,11 @@ int main(int argc, char *argv[])
 		error_handle(97, argv, 0);
 
 	file_from = open(argv[1], O_RDONLY);
-	error_handle(98, argv, 0);
+	if (file_form == -1)
+		error_handle(98, argv, 0);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_handle(99, argv, 0);
+	if (file_to == -1)
+		error_handle(99, argv, 0);
 
 	num_char_r = 1024;
 	while (num_char_r == 1024)
