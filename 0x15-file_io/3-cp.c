@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 		error_handle(97, argv, 0);
 
 	file_from = open(argv[1], O_RDONLY);
-	if (file_form == -1)
+	if (file_from == -1)
 		error_handle(98, argv, 0);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (file_to == -1)
